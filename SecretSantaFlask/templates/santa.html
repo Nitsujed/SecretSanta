@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Secret Santa</title>
+    <link rel="stylesheet" media="screen" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+
+<div class="container">
+
+
+    <h2>Merry Christmas</h2>
+
+    <form action="santa.html" method="post" role="form">
+        {{ form.csrf }}
+        <div class="form-group">
+
+            <br>
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name"
+                   placeholder="Person's Name goes here" value={{ name }} readonly>
+            <br>
+            <label for="love_this">Love this but never buy:</label>
+            <input type="text" class="form-control" id="love_this" name="love_this"
+                   placeholder="I gotta have it or I might die" value="{{ love_this }}">
+            <br>
+            <label for="collections">Add this to my collection:</label>
+            <input type="text" class="form-control" id="collections" name="collections"
+                   placeholder="Got to get another spongebob tattoo" value="{{ collections }}">
+            <br>
+            <label for="hobbies">In my spare time, I'm doing this:</label>
+            <input type="text" class="form-control" id="hobbies" name="hobbies" placeholder="Wish I had spare time"
+                   value="{{ hobbies }}">
+            <br>
+            <label for="favorites">These are some of my favorite things:</label>
+            <input type="text" class="form-control" id="favorites" name="favorites"
+                   placeholder="Candy, Color, Snacks, Beverages, Movies, Magazines, Scents, Restaurants, Stores"
+                   value="{{ favorites }}">
+            <br>
+            <label for="on_list">And, if you REALLY want to know whats on my list:</label>
+            <input type="text" class="form-control" id="on_list" name="on_list" placeholder="This is a sure win"
+                   value="{{ on_list }}">
+            <br>
+            <label for="avoid">But, please, stay away from this:</label>
+            <input type="text" class="form-control" id="avoid" name="avoid"
+                   placeholder="I dont want a flaming bag of poop..."
+                   value="{{ avoid }}">
+            <br>
+
+
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+
+    <br>
+
+</div>
+<br>
+</div>
+</div>
+</body>
+</html>

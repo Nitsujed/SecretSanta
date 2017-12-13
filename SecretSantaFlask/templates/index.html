@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Secret Santa</title>
+    <link rel="stylesheet" media="screen" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div class="container">
+
+
+    <h2>Merry Christmas</h2>
+
+    <h4>Pick a name from the list to view their file.</h4>
+
+    <form name="Item_1" action="" method='POST'>
+        <select name="Item_1" class="dropdown dropdown">
+            <option value="Will">Will</option>
+            <option value="Heather">Heather</option>
+            <option value="Justin">Justin</option>
+            <option value="Meredith">Meredith</option>
+            <option value="Doyle">Doyle</option>
+            <option value="Connie">Connie</option>
+        </select>
+        {{ form.csrf }}
+        <div class="form-group">
+            <br>
+            <label for="secret_password">Secret Password:</label>
+            <input type="text" class="form-control" id="secret_password" name="secret_password"
+                   placeholder="This must be entered and correct to save any changes">
+            <button type="submit" class="btn btn-success">Hohoho!</button>
+        </div>
+    </form>
+    <br>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+
+            {% for message in messages %}
+                {% if "wrong password" not in message[1]: %}
+                    <div class="alert alert-info">
+                        <strong>Success! </strong> {{ message[1] }}
+                    </div>
+                {% endif %}
+
+                {% if "wrong password" in message[1]: %}
+                    <div class="alert alert-warning">
+                        <strong>Wrong!! </strong>{{ message[1] }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</div>
+</body>
+</html>

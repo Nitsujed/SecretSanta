@@ -1,0 +1,57 @@
+auth: <mail-gun api key>
+
+api_url: <mail-gun api url>
+
+gift_url: <url for gift website
+
+password: <gift website password>
+
+participants:
+  connie:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: will
+  dad:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: mom
+  doyle:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: heather
+  heather:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: doyle
+  justin:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: meredith
+  meredith:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: justin
+  mom:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: dad
+  will:
+    email: <email>
+    message: ''
+    ornament: ''
+    santee: ''
+    spouse: connie
